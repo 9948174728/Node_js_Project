@@ -6,9 +6,9 @@ const port = process.env.PORT || 3000;
 // importing the dotenv module to use environment variables:
 require("dotenv").config();
 
-const api_key = process.env.SECRET_KEY;
+const api_key = process.env."sk_test_51L5AsSSCC8JVWfvgxpyZvQyBRRkHmGBkdyIa94vPD3Zs71qbHGrnSPlrJOIWiR74fbcn1A85yESCFnrrp3aX0Oz900JaunHrhe";
 
-const stripe = require("stripe")(api_key);
+const stripe = require("pk_test_51L5AsSSCC8JVWfvgEtfJkzHMTh7Z5PLY5m1yhR379sJgwAVZEe13NaiG33wsHSyHnPJMjTNOosiPk6AeMI8q0ims0049IKffiu")(api_key);
 
 // ------------ Imports & necessary things here ------------
 
