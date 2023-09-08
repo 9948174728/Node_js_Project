@@ -1,20 +1,17 @@
-# Use the official Node.js Alpine image as the base image
+# Use the official Node.js 14.x image with Alpine Linux as the base image
 FROM node:14-alpine
 
-# Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
-COPY package.json ./
-
-# Install project dependencies
-RUN npm install
-
-# Copy the application code to the working directory
+# Copy your application files into the container
 COPY . .
 
-# Expose the port your application listens on (replace 3000 with the actual port)
+# Install project dependencies
+RUN npm install express stripe dotenv
+
+# Expose the port that your Node.js app will listen on (adjust this as needed)
 EXPOSE 3000
 
-# Start your Node.js application
+# Specify the command to start your Node.js application
 CMD ["node", "server.js"]
